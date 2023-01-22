@@ -1,8 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-require('.env').config()
-const port = process.env.PORT || 3005
+
 require('./config/mongooseConnection')
 const routerV1 = require('./routes/index')
 const app = express()
@@ -14,4 +13,4 @@ app.use('/api', routerV1)
 
 
 
-app.listen(port)
+app.listen(3005)
