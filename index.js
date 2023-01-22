@@ -4,7 +4,7 @@ const cors = require('cors')
 
 require('./config/mongooseConnection')
 require('dotenv').config()
-const PORT = process.env.PORT || 3005
+const PORT = process.env.PORT 
 const routerV1 = require('./routes/index')
 const app = express()
 
