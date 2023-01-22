@@ -3,8 +3,8 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 require('./config/mongooseConnection')
-require('dotenv').config('./.env')
-const PORT = process.env.PORT || 3005;
+require('dotenv').config()
+const PORT = process.env.PORT || 3005
 const routerV1 = require('./routes/index')
 const app = express()
 
