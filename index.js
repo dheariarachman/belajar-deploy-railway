@@ -19,4 +19,4 @@ app.use('/product', routerProduct)
 
 
 
-app.listen(PORT);
+app.listen(`0.0.0.0:${PORT}`);
