@@ -19,4 +19,6 @@ app.use('/product', routerProduct)
 
 
 
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(`Listening on PORT ${PORT} `);
+});
