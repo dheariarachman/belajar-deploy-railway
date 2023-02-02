@@ -15,4 +15,4 @@ app.use('/api', routerV1)
 
 
 
-app.listen(PORT);
+app.listen(PORT, "0.0.0.0");
