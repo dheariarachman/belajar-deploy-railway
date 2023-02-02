@@ -3,16 +3,17 @@ const Product = require('../model/productModel')
 // const fs = require('fs')
 
 const getProduct = (req, res) => {
-    Product.find()
-    .then(result => 
-        res.send({
-            status : 200,
-            message: 'Get Method Success',
-            data : result
-        })
-    ).catch(error => 
-        res.send({message : error.message})
-    )
+    res.json({ message: "Get All Product" });
+    // Product.find()
+    // .then(result => 
+    //     res.send({
+    //         status : 200,
+    //         message: 'Get Method Success',
+    //         data : result
+    //     })
+    // ).catch(error => 
+    //     res.send({message : error.message})
+    // )
 }
 const getProductByid = (req, res) => {
     Product.findById(req.params.id)

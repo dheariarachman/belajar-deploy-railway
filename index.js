@@ -7,6 +7,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3000
 const routerV1 = require('./routes/index')
 const routerProduct = require('./routes/product')
+const { getProductByid, getProduct } = require('./controller/productController')
 const app = express()
 
 app.use(cors())
@@ -15,7 +16,7 @@ app.use(bodyParser.json())
 app.get('/', (req, res) =>{
     res.send("hello world")
 })
-app.use('/product', routerProduct)
+app.get('/product', getProduct)
 
 
 
