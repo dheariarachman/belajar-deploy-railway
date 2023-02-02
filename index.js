@@ -6,6 +6,7 @@ require('./config/mongooseConnection')
 require('dotenv').config()
 const PORT = process.env.PORT || 3000
 const routerV1 = require('./routes/index')
+const routerProduct = require('./routes/product')
 const app = express()
 
 app.use(cors())
@@ -14,7 +15,7 @@ app.use(bodyParser.json())
 app.get('/', (req, res) =>{
     res.send("hello world")
 })
-app.use('/api', routerV1)
+app.use('/product', routerProduct)
 
 
 
