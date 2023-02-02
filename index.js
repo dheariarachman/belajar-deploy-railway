@@ -4,7 +4,7 @@ const cors = require('cors')
 
 require('./config/mongooseConnection')
 require('dotenv').config()
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 const routerV1 = require('./routes/index')
 const app = express()
 
@@ -15,4 +15,4 @@ app.use('/api', routerV1)
 
 
 
-app.listen(PORT, "0.0.0.0");
+app.listen(PORT);
